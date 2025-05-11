@@ -10,7 +10,9 @@ class StackArray<E> implements Stack<E> {
     }
 
     public void push(E x){
-
+        if (isFull()) {
+            throw new RuntimeException("Esta lleno");
+        }
     }
 
     public E pop() throws ExceptionIsEmpty {
