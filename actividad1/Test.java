@@ -11,6 +11,8 @@ public class Test {
             System.out.println("contenido: " + pila.toString());
             System.out.println("pop: " + pila.pop());
             System.out.println("nuevo tope: " + pila.top());
+        } catch (ExceptionIsEmpty e){
+            System.out.println(e.getMessage());
         }
     }
 }
