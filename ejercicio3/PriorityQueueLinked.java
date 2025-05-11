@@ -12,5 +12,12 @@ public class PriorityQueueLinked<T> implements PriorityQueue<T> {
         }
     }
 
+    public void enqueue(T element, int priority) throws ExceptionIsEmpty{
+        if (priority < 0 || priority >= levels){
+            throw new ExceptionIsEmpty("Invalid priority");
+        }
+        queues[priority].enqueue(element);
+    }
+
     
 }
