@@ -4,7 +4,7 @@ import actividad1.ExceptionIsEmpty;
 
 public class Test {
     public static void main(String[] args) {
-        QueueLink<Integer> cola = new QueueLink<>();
+        Queue<Integer> cola = new QueueLink<>();
 
         try {
             cola.enqueue(10);
