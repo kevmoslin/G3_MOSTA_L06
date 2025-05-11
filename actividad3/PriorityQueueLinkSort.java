@@ -79,6 +79,12 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
     }
 
     public String toString(){
-
+        StringBuilder sb = new StringBuilder();
+        Node<EntryNode> current = first;
+        while (current != null) {
+            sb.append(current.data.toString()).append(" -> ");
+            current = current.siguiente;
+        }
+        return sb.toString();
     }
 }
