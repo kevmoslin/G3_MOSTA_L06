@@ -75,7 +75,7 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
     }
 
     public boolean isEmpty(){
-
+        return first == null;
     }
 
     public String toString(){
