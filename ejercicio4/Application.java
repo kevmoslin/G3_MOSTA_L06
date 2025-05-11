@@ -1,12 +1,29 @@
 package ejercicio4;
 
-import ejercicio1.StackLink;
+import java.util.Scanner;
 
 public class Application {
-    public static boolean symbolBalancing(String input){
+    public static boolean symbolBalancing(String s) throws ExceptionIsEmpty{
         StackLink<Character> stack = new StackLink<>();
-        for (char ch : input.toCharArray()){
-            
+        Scanner input = new Scanner(System.in);
+        String linea = input.nextLine();            
+        char[] caracteres = linea.toCharArray();    
+
+        for (char ch : caracteres){
+            if (ch == '(' || ch == '[' || ch == '{') {
+                stack.push(ch);
+            } else if (ch == ')' || ch == ']' || ch == '}') {
+                if (stack.isEmpty()){
+                    return false;
+                }
+                char open = stack.pop();
+                if ((ch == ')' && open != '(') ||
+                    (ch == ']' && open != '[') ||
+                    (ch == '}' && open != '{')) {
+                    return false;
+                }
+            }
         }
+        return stack.isEmpty();
     }
 }
