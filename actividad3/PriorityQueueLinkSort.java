@@ -71,6 +71,7 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
         if (isEmpty()) {
             throw new ExceptionIsEmpty("Priority Queue is empty");
         }
+        return last.data.data;
     }
 
     public boolean isEmpty(){
