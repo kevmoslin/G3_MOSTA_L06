@@ -26,5 +26,6 @@ public class StackLink<T> implements Stack<T> {
         if (isEmpty()) {
             throw new ExceptionIsEmpty("Stack is Empty");
         }
+        return top.data;
     }
 }
