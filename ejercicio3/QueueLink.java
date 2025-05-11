@@ -1,8 +1,5 @@
 package ejercicio3;
 
-import ejercicio2.*;
-import ejercicio1.*;
-
 public class QueueLink<T> implements Queue<T> {
     private Node<T> first, last;
 
@@ -20,11 +17,7 @@ public class QueueLink<T> implements Queue<T> {
         }
     }
 
-    public T dequeue() throws ExceptionIsEmpty {
-        if (isEmpty()) {
-            throw new ExceptionIsEmpty("Queue is empty");
-        }
-    
+    public T dequeue(){
         T data = first.data;
         first = first.siguiente;
         if (first == null) {
