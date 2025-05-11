@@ -1,5 +1,7 @@
 package ejercicio2;
 
+import actividad1.ExceptionIsEmpty;
+
 public class QueueArray<T> implements Queue<T> {
     private T[] data;
     private int front, rear, size, capacity;
@@ -11,4 +13,15 @@ public class QueueArray<T> implements Queue<T> {
         rear = -1;
         size = 0;
     }
+
+    public void enqueue(T elemento) throws ExceptionIsEmpty{
+        if (size == capacity) {
+            throw new ExceptionIsEmpty("queue is full");
+        }
+
+        rear = (rear + 1) % capacity;
+        data[rear] = elemento;
+    }
+
+    
 }
