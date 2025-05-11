@@ -20,7 +20,7 @@ public class QueueLink<T> implements Queue<T> {
         }
     }
 
-    public T dequeue() throws ExceptionIsEmpty{
+    public T dequeu() throws ExceptionIsEmpty{
         if (isEmpty()) {
             throw new ExceptionIsEmpty("Queue is empty");
         }
