@@ -19,5 +19,12 @@ public class PriorityQueueLinked<T> implements PriorityQueue<T> {
         queues[priority].enqueue(element);
     }
 
-    
+    public T dequeue() throws ExceptionIsEmpty{
+        for (int i = 0; i < levels; i++) {
+            if (!queues[i].isEmpty()) {
+                return queues[i].dequeue();
+            }
+        }
+        throw new ExceptionIsEmpty("Priority queue is empty");
+    }
 }
