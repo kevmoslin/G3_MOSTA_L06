@@ -61,11 +61,16 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
     }
 
     public E front() throws ExceptionIsEmpty{
-
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("Priority Queue is empty");
+        }
+        return first.data.data;
     }
 
     public E back() throws ExceptionIsEmpty{
-
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("Priority Queue is empty");
+        }
     }
 
     public boolean isEmpty(){
@@ -73,6 +78,6 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
     }
 
     public String toString(){
-        
+
     }
 }
