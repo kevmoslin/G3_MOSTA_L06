@@ -21,7 +21,8 @@ public class QueueArray<T> implements Queue<T> {
 
         rear = (rear + 1) % capacity;
         data[rear] = elemento;
+        size++;
     }
 
-    
+
 }
