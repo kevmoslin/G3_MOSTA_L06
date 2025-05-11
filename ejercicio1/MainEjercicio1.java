@@ -9,9 +9,11 @@ public class MainEjercicio1 {
             pila.push(10);
             pila.push(20);
 
-            System.out.println();
+            System.out.println("elemento eliminado: " + pila.pop());
+            System.out.println("elemento en el tope: " + pila.top());
+            System.out.println("esta vacia?: " + pila.isEmpty());
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
