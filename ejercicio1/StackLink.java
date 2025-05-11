@@ -28,4 +28,8 @@ public class StackLink<T> implements Stack<T> {
         }
         return top.data;
     }
+
+    public boolean isEmpty(){
+        return top == null;
+    }
 }
