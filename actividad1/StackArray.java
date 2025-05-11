@@ -17,7 +17,10 @@ class StackArray<E> implements Stack<E> {
     }
 
     public E pop() throws ExceptionIsEmpty {
-
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("esta vacio");
+        }
+        return array[tope--];
     }
 
     public E top() throws ExceptionIsEmpty {
