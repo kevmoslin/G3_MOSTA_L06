@@ -5,6 +5,11 @@ public class Test {
         Stack<Integer> pila = new StackArray<>(5);
         try{
             pila.push(10);
+            pila.push(20);
+            pila.push(30);
+            System.out.println("tope: " + pila.top());
+            System.out.println("contenido: " + pila.toString());
+            
         }
     }
 }
