@@ -59,4 +59,20 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
         }
         return data;
     }
+
+    public E front() throws ExceptionIsEmpty{
+
+    }
+
+    public E back() throws ExceptionIsEmpty{
+
+    }
+
+    public boolean isEmpty(){
+
+    }
+
+    public String toString(){
+        
+    }
 }
