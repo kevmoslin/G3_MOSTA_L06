@@ -11,9 +11,11 @@ public class QueueLink<T> implements Queue<T> {
     }
 
     public void enqueue(T elemento){
-        Node<T> newNode = new Node<>(element);
+        Node<T> newNode = new Node<>(elemento);
         if (isEmpty()) {
             first = last = newNode;
+        } else{
+            last.siguiente = newNode;
         }
     }
 
