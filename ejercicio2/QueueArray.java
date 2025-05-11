@@ -33,4 +33,8 @@ public class QueueArray<T> implements Queue<T> {
         size--;
         return elemento;
     }
+
+    public boolean isEmpty(){
+        return size == 0;
+    }
 }
