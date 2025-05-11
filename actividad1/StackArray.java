@@ -35,7 +35,7 @@ class StackArray<E> implements Stack<E> {
     }
 
     public boolean isFull(){
-
+        return tope == array.length - 1;
     }
 
     public String toString(){
