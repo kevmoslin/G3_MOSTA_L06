@@ -10,5 +10,15 @@ public class QueueLink<T> implements Queue<T> {
         first = last = null;
     }
 
-    
+    public void enqueue(T elemento){
+
+    }
+
+    public T dequeu() throws ExceptionIsEmpty{
+
+    }
+
+    public boolean isEmpty(){
+        return first == null;
+    }
 }
