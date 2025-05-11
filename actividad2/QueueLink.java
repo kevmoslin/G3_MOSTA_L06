@@ -16,7 +16,8 @@ public class QueueLink<E> implements Queue<E> {
         if (this.isEmpty()) {
             this.first = aux;
         }else{
-            this.last.setNext(aux);
+            this.last.siguiente(aux);
+            this.last = aux;
         }
     }
 }

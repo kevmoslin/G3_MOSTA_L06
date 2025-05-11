@@ -1,8 +1,8 @@
 package actividad2;
 
-import actividad1.*;
+import actividad1.ExceptionIsEmpty;
 
-public class Queue<E> {
+public interface Queue<E> {
     void enqueue(E x);
     E dequeue() throws ExceptionIsEmpty;
     E front() throws ExceptionIsEmpty;
