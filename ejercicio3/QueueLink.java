@@ -16,11 +16,16 @@ public class QueueLink<T> implements Queue<T> {
             first = last = newNode;
         } else{
             last.siguiente = newNode;
+            last = newNode;
         }
     }
 
     public T dequeu() throws ExceptionIsEmpty{
-
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("Queue is empty");
+        }
+        T data = first.data;
+        first = first.siguiente;
     }
 
     public boolean isEmpty(){
