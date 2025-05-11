@@ -20,4 +20,16 @@ public class QueueLink<E> implements Queue<E> {
             this.last = aux;
         }
     }
+
+    public E dequeue() throws ExceptionIsEmpty{
+        if (this.isEmpty()) {
+            throw new ExceptionIsEmpty("cola vacia");
+        }
+        E dato = this.first.data;
+        this.first = this.first.siguiente;
+        if (this.first == null) {
+            this.last = null;
+        }
+        return dato;
+    }
 }
