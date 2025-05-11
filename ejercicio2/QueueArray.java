@@ -24,5 +24,11 @@ public class QueueArray<T> implements Queue<T> {
         size++;
     }
 
+    public T dequeue() throws ExceptionIsEmpty{
+        if (size == capacity) {
+            throw new ExceptionIsEmpty("queue is empty");
+        }
+        T elemnto = data[front];
 
+    }
 }
