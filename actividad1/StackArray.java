@@ -13,6 +13,7 @@ class StackArray<E> implements Stack<E> {
         if (isFull()) {
             throw new RuntimeException("Esta lleno");
         }
+        array[++tope] = x;
     }
 
     public E pop() throws ExceptionIsEmpty {
