@@ -32,4 +32,22 @@ public class QueueLink<E> implements Queue<E> {
         }
         return dato;
     }
+
+    public E front() throws ExceptionIsEmpty{
+        if (this.isEmpty()) {
+            throw new ExceptionIsEmpty("cola vacia");
+        }
+        return this.first.data;
+    }
+
+    public E back() throws ExceptionIsEmpty{
+        if (this.isEmpty()) {
+            throw new ExceptionIsEmpty("cola vacia");
+        }
+        return this.last.data;
+    }
+
+    public boolean isEmpty(){
+        return this.first == null;
+    }
 }
