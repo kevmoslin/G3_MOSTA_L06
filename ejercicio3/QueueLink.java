@@ -20,13 +20,14 @@ public class QueueLink<T> implements Queue<T> {
         }
     }
 
-    public T dequeu() throws ExceptionIsEmpty{
+    public T dequeue() throws ExceptionIsEmpty {
         if (isEmpty()) {
             throw new ExceptionIsEmpty("Queue is empty");
         }
+    
         T data = first.data;
         first = first.siguiente;
-        if (first == null){
+        if (first == null) {
             last = null;
         }
         return data;
