@@ -27,4 +27,13 @@ public class PriorityQueueLinked<T> implements PriorityQueue<T> {
         }
         throw new ExceptionIsEmpty("Priority queue is empty");
     }
+
+    public boolean isEmpty() {
+        for (QueueLink<T> queue : queues) {
+            if (!queue.isEmpty()){
+                return false;
+            } 
+        }
+        return true;
+    }
 }
