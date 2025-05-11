@@ -13,7 +13,8 @@ public class Test {
         System.out.println(colaPrioridad);
 
         try {
-            
+            System.out.println("atendiendo: " + colaPrioridad.dequeue());
+            System.out.println("siguiente en la cola: " + colaPrioridad.front());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
