@@ -1,6 +1,6 @@
 package actividad2;
 
-import actividad1.ExceptionIsEmpty;
+import actividad1.*;
 
 public class Queue<E> {
     void enqueue(E x);
