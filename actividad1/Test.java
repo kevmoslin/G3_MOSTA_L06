@@ -9,7 +9,8 @@ public class Test {
             pila.push(30);
             System.out.println("tope: " + pila.top());
             System.out.println("contenido: " + pila.toString());
-            
+            System.out.println("pop: " + pila.pop());
+            System.out.println("nuevo tope: " + pila.top());
         }
     }
 }
