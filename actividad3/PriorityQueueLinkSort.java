@@ -1,5 +1,7 @@
 package actividad3;
 
+import actividad1.ExceptionIsEmpty;
+
 public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements PriorityQueue<E, N> {
     class EntryNode{
         E data;
@@ -46,4 +48,15 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
         }
     }
     
+    public E dequeue() throws ExceptionIsEmpty{
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("Priority Queue is empty");
+        }
+        E data = first.data.data;
+        first = first.siguiente;
+        if (first == null) {
+            last = null;
+        }
+        return data;
+    }
 }
