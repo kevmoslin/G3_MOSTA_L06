@@ -39,6 +39,10 @@ class StackArray<E> implements Stack<E> {
     }
 
     public String toString(){
-
+        StringBuilder sb = new StringBuilder();
+        for(int i = tope; i >= 0; i++){
+            sb.append(array[i]).append(" ");
+        }
+        return sb.toString();
     }
 }
